@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 
+
 namespace Ui {
 class MainWindow;
 }
@@ -15,14 +16,12 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
-private:
-    void openSetting();
-    void initMenu();
-    Ui::MainWindow *ui;
-    QAction *helpAction;//important, without this can't be used in mainwindow.cpp
-    QAction *aboutAction;
-    QAction *settingAction;
+private slots:
 
+    void on_okPushButton_clicked();
+
+private:
+    Ui::MainWindow *ui;
 };
 
 #endif // MAINWINDOW_H
